@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bd31c49d-d2ff-4c8f-ad89-c8d9409d6b3e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/application.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/url_mappings.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/ping/ping_controller.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/users/users_controller.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/users/user_dao.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/users/user_dto.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/users_service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/errors/rest_error.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="$USER_HOME$/sdk/go1.15.5" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1kvcbvdsQvKAvVzq5sN0BIjrK0e" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="go.sdk" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/controllers/ping" />
+      <recent name="$PROJECT_DIR$/controllers/users" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build github.com/ericha1981/bookstore_users-api">
+    <configuration name="go build github.com/ericha1981/bookstore_users-api" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="bookstore_users-api" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="github.com/ericha1981/bookstore_users-api" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="bookstore_users-api" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="github.com/ericha1981/bookstore_users-api" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build users_service.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="bookstore_users-api" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/services/users_service.go" />
+      <package value="github.com/ericha1981/bookstore_users-api" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build github.com/ericha1981/bookstore_users-api" />
+        <item itemvalue="Go Build.go build main.go" />
+        <item itemvalue="Go Build.go build users_service.go" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bd31c49d-d2ff-4c8f-ad89-c8d9409d6b3e" name="Default Changelist" comment="" />
+      <created>1606584583156</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606584583156</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="640" y="200" key="#GOPATH" timestamp="1606586312844">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state x="640" y="200" key="#GOPATH/0.25.1680.1025@0.25.1680.1025" timestamp="1606586312844" />
+    <state x="640" y="471" key="#GOROOT" timestamp="1606585667719">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state x="640" y="471" key="#GOROOT/0.25.1680.1025@0.25.1680.1025" timestamp="1606585667719" />
+    <state width="1638" height="339" key="GridCell.Tab.0.bottom" timestamp="1606682490415">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state width="1638" height="339" key="GridCell.Tab.0.bottom/0.25.1680.1025@0.25.1680.1025" timestamp="1606682490415" />
+    <state width="1638" height="339" key="GridCell.Tab.0.center" timestamp="1606682490414">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state width="1638" height="339" key="GridCell.Tab.0.center/0.25.1680.1025@0.25.1680.1025" timestamp="1606682490414" />
+    <state width="1638" height="339" key="GridCell.Tab.0.left" timestamp="1606682490414">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state width="1638" height="339" key="GridCell.Tab.0.left/0.25.1680.1025@0.25.1680.1025" timestamp="1606682490414" />
+    <state width="1638" height="339" key="GridCell.Tab.0.right" timestamp="1606682490415">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state width="1638" height="339" key="GridCell.Tab.0.right/0.25.1680.1025@0.25.1680.1025" timestamp="1606682490415" />
+    <state x="349" y="173" key="SettingsEditor" timestamp="1606586251070">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state x="349" y="173" key="SettingsEditor/0.25.1680.1025@0.25.1680.1025" timestamp="1606586251070" />
+    <state x="641" y="455" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606586378453">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state x="641" y="455" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1680.1025@0.25.1680.1025" timestamp="1606586378453" />
+    <state x="505" y="252" width="670" height="676" key="search.everywhere.popup" timestamp="1606676902451">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state x="505" y="252" width="670" height="676" key="search.everywhere.popup/0.25.1680.1025@0.25.1680.1025" timestamp="1606676902451" />
+  </component>
+</project>
