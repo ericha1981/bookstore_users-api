@@ -13,6 +13,10 @@ import (
 	Handle all requests processed here (entry point)
 */
 
+func TestServiceInterface()  {
+
+}
+
 func getUserId(userIdParam string) (int64, *errors.RestErr) {
 	userId, userErr := strconv.ParseInt(userIdParam, 10, 64)
 	if userErr != nil {
@@ -29,7 +33,7 @@ func Create(c *gin.Context) {
 		return
 	}
 
-	result, saveErr := services.CreateUser(user)
+	result, saveErr := services.UserService.CreateUser(user)
 	if saveErr != nil { // non pointer type throws an error here: Cannot convert 'nil' to type 'errors.RestErr'.
 		c.JSON(saveErr.Status, saveErr)
 		return
@@ -45,7 +49,7 @@ func Get(c *gin.Context) {
 	}
 
 	// Get user from the DB
-	user, getErr := services.GetUser(userId)
+	user, getErr := services.UserService.GetUser(userId)
 	if getErr != nil { // non pointer type throws an error here: Cannot convert 'nil' to type 'errors.RestErr'.
 		c.JSON(getErr.Status, getErr)
 		return
@@ -69,7 +73,7 @@ func Update(c *gin.Context) {
 
 	user.Id = userId
 	isPartial := c.Request.Method == http.MethodPatch	// Determine whether it's a partial update (PATCH) or a full update (PUT)
-	result, err := services.UpdateUser(isPartial, user)
+	result, err := services.UserService.UpdateUser(isPartial, user)
 	if err != nil {
 		c.JSON(err.Status, err)
 		return
@@ -84,7 +88,7 @@ func Delete(c *gin.Context) {
 		return
 	}
 
-	if err := services.DeleteUser(userId); err != nil {
+	if err := services.UserService.DeleteUser(userId); err != nil {
 		c.JSON(err.Status, err)
 		return
 	}
@@ -93,7 +97,7 @@ func Delete(c *gin.Context) {
 
 func Search(c *gin.Context)  {
 	status := c.Query("status")
-	users, err := services.Search(status)
+	users, err := services.UserService.SearchUser(status)
 	if err != nil {
 		c.JSON(err.Status, err)
 		return
