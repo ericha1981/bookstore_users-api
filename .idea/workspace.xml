@@ -20,15 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd31c49d-d2ff-4c8f-ad89-c8d9409d6b3e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/application.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/url_mappings.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/ping/ping_controller.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/users/users_controller.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/users/user_dao.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/users/user_dto.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/users_service.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/errors/rest_error.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasources/mysql/users_db/users_db.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/users/user_marshaller.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/crypto_utils/crypto_utils.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/date_utils/date_utils.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/mysql_utils/mysql_utils.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/url_mappings.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/url_mappings.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/users/users_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/users/users_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/users/user_dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/domain/users/user_dao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/users/user_dto.go" beforeDir="false" afterPath="$PROJECT_DIR$/domain/users/user_dto.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/users_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/users_service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/errors/rest_error.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/errors/rest_error.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +58,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="postgresql&#10;mysql&#10;cassandra" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -64,7 +69,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="go.sdk" />
+    <property name="settings.editor.selected.configurable" value="SQL Dialects" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -72,39 +77,25 @@
       <recent name="$PROJECT_DIR$/controllers/users" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build github.com/ericha1981/bookstore_users-api">
-    <configuration name="go build github.com/ericha1981/bookstore_users-api" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="bookstore_users-api" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/main.go" />
-      <package value="github.com/ericha1981/bookstore_users-api" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="bookstore_users-api" />
       <working_directory value="$PROJECT_DIR$" />
+      <envs>
+        <env name="mysql_username" value="root" />
+        <env name="mysql_password" value="Greatstart1" />
+        <env name="mysql_host" value="127.0.0.1:3306" />
+        <env name="mysql_schema" value="users_db" />
+      </envs>
       <kind value="FILE" />
       <filePath value="$PROJECT_DIR$/main.go" />
-      <package value="github.com/ericha1981/bookstore_users-api" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build users_service.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="bookstore_users-api" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/services/users_service.go" />
       <package value="github.com/ericha1981/bookstore_users-api" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build github.com/ericha1981/bookstore_users-api" />
         <item itemvalue="Go Build.go build main.go" />
-        <item itemvalue="Go Build.go build users_service.go" />
       </list>
     </recent_temporary>
   </component>
@@ -146,33 +137,77 @@
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state x="640" y="471" key="#GOROOT/0.25.1680.1025@0.25.1680.1025" timestamp="1606585667719" />
-    <state width="1638" height="339" key="GridCell.Tab.0.bottom" timestamp="1606682490415">
+    <state x="440" y="200" width="800" height="723" key="#Intentions" timestamp="1606802884493">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
-    <state width="1638" height="339" key="GridCell.Tab.0.bottom/0.25.1680.1025@0.25.1680.1025" timestamp="1606682490415" />
-    <state width="1638" height="339" key="GridCell.Tab.0.center" timestamp="1606682490414">
+    <state x="440" y="200" width="800" height="723" key="#Intentions/0.25.1680.1025@0.25.1680.1025" timestamp="1606802884493" />
+    <state x="233" y="371" key="#SQL_Dialects" timestamp="1606963464445">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
-    <state width="1638" height="339" key="GridCell.Tab.0.center/0.25.1680.1025@0.25.1680.1025" timestamp="1606682490414" />
-    <state width="1638" height="339" key="GridCell.Tab.0.left" timestamp="1606682490414">
+    <state x="233" y="371" key="#SQL_Dialects/0.25.1680.1025@0.25.1680.1025" timestamp="1606963464445" />
+    <state x="114" y="135" width="1071" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607232076012">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
-    <state width="1638" height="339" key="GridCell.Tab.0.left/0.25.1680.1025@0.25.1680.1025" timestamp="1606682490414" />
-    <state width="1638" height="339" key="GridCell.Tab.0.right" timestamp="1606682490415">
+    <state x="114" y="135" width="1071" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1680.1025@0.25.1680.1025" timestamp="1607232076012" />
+    <state x="578" y="343" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606962936876">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
-    <state width="1638" height="339" key="GridCell.Tab.0.right/0.25.1680.1025@0.25.1680.1025" timestamp="1606682490415" />
-    <state x="349" y="173" key="SettingsEditor" timestamp="1606586251070">
+    <state x="578" y="343" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1680.1025@0.25.1680.1025" timestamp="1606962936876" />
+    <state x="477" y="206" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1606967732083">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
-    <state x="349" y="173" key="SettingsEditor/0.25.1680.1025@0.25.1680.1025" timestamp="1606586251070" />
+    <state x="477" y="206" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.25.1680.1025@0.25.1680.1025" timestamp="1606967732083" />
+    <state x="832" y="290" width="406" height="541" key="EnvironmentVariablesDialog" timestamp="1606876861142">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state x="832" y="290" width="406" height="541" key="EnvironmentVariablesDialog/0.25.1680.1025@0.25.1680.1025" timestamp="1606876861142" />
+    <state width="1273" height="277" key="GridCell.Tab.0.bottom" timestamp="1607232160602">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state width="1273" height="277" key="GridCell.Tab.0.bottom/0.25.1680.1025@0.25.1680.1025" timestamp="1607232160602" />
+    <state width="1273" height="277" key="GridCell.Tab.0.center" timestamp="1607232160601">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state width="1273" height="277" key="GridCell.Tab.0.center/0.25.1680.1025@0.25.1680.1025" timestamp="1607232160601" />
+    <state width="1273" height="277" key="GridCell.Tab.0.left" timestamp="1607232160601">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state width="1273" height="277" key="GridCell.Tab.0.left/0.25.1680.1025@0.25.1680.1025" timestamp="1607232160601" />
+    <state width="1273" height="277" key="GridCell.Tab.0.right" timestamp="1607232160602">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state width="1273" height="277" key="GridCell.Tab.0.right/0.25.1680.1025@0.25.1680.1025" timestamp="1607232160602" />
+    <state width="229" height="457" key="HiddenNamespacesPopup" timestamp="1606798066138">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state width="229" height="457" key="HiddenNamespacesPopup/0.25.1680.1025@0.25.1680.1025" timestamp="1606798066138" />
+    <state x="349" y="173" key="SettingsEditor" timestamp="1606963432473">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state x="349" y="173" key="SettingsEditor/0.25.1680.1025@0.25.1680.1025" timestamp="1606963432473" />
+    <state x="440" y="274" key="Vcs.Push.Dialog.v2" timestamp="1606967675031">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state x="440" y="274" key="Vcs.Push.Dialog.v2/0.25.1680.1025@0.25.1680.1025" timestamp="1606967675031" />
+    <state x="745" y="418" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1606800902075">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state x="745" y="418" key="com.intellij.database.actions.DdlActions$CreateObject$1/0.25.1680.1025@0.25.1680.1025" timestamp="1606800902075" />
+    <state x="408" y="275" width="632" height="516" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1607194248896">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state x="408" y="275" width="632" height="516" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.25.1680.1025@0.25.1680.1025" timestamp="1607194248896" />
     <state x="641" y="455" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606586378453">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state x="641" y="455" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1680.1025@0.25.1680.1025" timestamp="1606586378453" />
-    <state x="505" y="252" width="670" height="676" key="search.everywhere.popup" timestamp="1606676902451">
+    <state x="541" y="170" width="597" height="735" key="find.popup" timestamp="1607220607528">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
-    <state x="505" y="252" width="670" height="676" key="search.everywhere.popup/0.25.1680.1025@0.25.1680.1025" timestamp="1606676902451" />
+    <state x="541" y="170" width="597" height="735" key="find.popup/0.25.1680.1025@0.25.1680.1025" timestamp="1607220607528" />
+    <state x="505" y="252" width="670" height="676" key="search.everywhere.popup" timestamp="1607233236834">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state x="505" y="252" width="670" height="676" key="search.everywhere.popup/0.25.1680.1025@0.25.1680.1025" timestamp="1607233236834" />
   </component>
 </project>
